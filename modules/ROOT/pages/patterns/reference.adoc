@@ -1415,7 +1415,7 @@ shortestPath((:A)-->+(:B))
 [[shortest-functions-rules-path-pattern-length]]
 ==== Path pattern length
 
-There must be exactly one relationship pattern in the path pattern.
+There must be exactly one relationship pattern in the path pattern, and the lower bound should be 0 or 1.
 
 .Allowed
 [source]
@@ -1427,6 +1427,8 @@ shortestPath((a)-[:R*1..5]-(b))
 [source]
 ----
 shortestPath((a)-[:R*1..5]-(b)-->(:X))
+
+shortestPath((a)-[:R*2..5]-(b))
 
 shortestPath((:A))
 
